@@ -1,25 +1,18 @@
 using Xunit;
-using ProjectEuler;
+using System;
 namespace TestX;
+
 
 public class UnitTest1
 {
-        [Fact]
-        public void Problem1Test()
-        {
-            Problem prob = new Problem1();
-            Assert.Equal(prob.getSolution(),"233168");
-        }
-        [Fact]
-        public void Problem2Test()
-        {
-            Problem prob = new Problem2();
-            Assert.Equal(prob.getSolution(),"4613732");
-        }
-        [Fact]
-        public void Problem3Test()
-        {
-            Problem prob = new Problem3();
-            Assert.Equal(prob.getSolution(),"6857");
-        }
+    [Theory]
+    [InlineData(typeof(ProjectEuler.Problem1), "233168")]
+    [InlineData(typeof(ProjectEuler.Problem2), "4613732")]
+    [InlineData(typeof(ProjectEuler.Problem3), "6857")]
+    public void CheckEuler(Type type, string correctAnswer)
+    {
+                ProjectEuler.Problem prob = (ProjectEuler.Problem) Activator.CreateInstance( type);
+                Assert.Equal(prob.getSolution(),correctAnswer);
+    }
+
 }
