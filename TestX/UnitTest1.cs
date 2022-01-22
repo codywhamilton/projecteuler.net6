@@ -12,7 +12,7 @@ public class UnitTest1
     public void CheckEuler(Type type, string correctAnswer)
     {
                 ProjectEuler.Problem prob = (ProjectEuler.Problem) Activator.CreateInstance( type);
-                Assert.Equal(prob.getSolution(),correctAnswer);
+                Assert.Equal(correctAnswer,prob.getSolution());
     }
 
 }
