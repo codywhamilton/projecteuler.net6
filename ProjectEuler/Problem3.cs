@@ -16,7 +16,6 @@ namespace ProjectEuler
                 while(num%i == 0){
                     num /= i;
                 }
-                i += 2;
             }
             return i.ToString();
         }
