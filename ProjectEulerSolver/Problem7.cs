@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectEuler
+namespace ProjectEulerSolver
 {
     //https://projecteuler.net/problem=7
     //What is the 10 001st prime number?

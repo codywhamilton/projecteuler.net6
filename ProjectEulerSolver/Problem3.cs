@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectEuler
+namespace ProjectEulerSolver
 {        
     //https://projecteuler.net/problem=3
     //What is the largest prime factor of the number 600851475143 ?

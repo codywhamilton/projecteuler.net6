@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjectEuler
+namespace ProjectEulerSolver
 {
     //https://projecteuler.net/problem=4
     //Find the largest palindrome made from the product of two 3-digit numbers.

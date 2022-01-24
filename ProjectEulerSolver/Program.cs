@@ -7,9 +7,9 @@ int probNum;
 while((line = Console.ReadLine()) != "xx")
 {
     if(int.TryParse(line,out probNum) && probNum >= 1 && probNum <= 10){
-        String typeName = "ProjectEuler.Problem"+probNum;
+        String typeName = "ProjectEulerSolver.Problem"+probNum;
         Type type = Type.GetType(typeName);
-        ProjectEuler.IProblem prob = (ProjectEuler.IProblem) Activator.CreateInstance( type);
+        ProjectEulerSolver.IProblem prob = (ProjectEulerSolver.IProblem) Activator.CreateInstance( type);
         Console.WriteLine(prob.GetSolution());
     }
     else {

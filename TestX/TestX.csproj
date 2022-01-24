@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ProjectEuler\projecteuler.net6.csproj" />
+    <ProjectReference Include="..\ProjectEulerSolver\ProjectEulerSolver.csproj" />
   </ItemGroup>
 
 </Project>
