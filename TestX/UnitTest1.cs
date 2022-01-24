@@ -16,6 +16,7 @@ public class UnitTest1
     [InlineData(typeof(ProjectEulerSolver.Problem8), "23514624000")]
     [InlineData(typeof(ProjectEulerSolver.Problem9), "31875000")]
     [InlineData(typeof(ProjectEulerSolver.Problem10), "142913828922")]
+    [InlineData(typeof(ProjectEulerSolver.Problem11), "70600674")]
     public void CheckEuler(Type type, string correctAnswer)
     {
         ProjectEulerSolver.IProblem prob = (ProjectEulerSolver.IProblem)Activator.CreateInstance(type);
