@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    public class Problem9 : Problem
+    public class Problem9 : IProblem
     {
         // https://projecteuler.net/problem=9
         /*
@@ -18,24 +18,30 @@ namespace ProjectEuler
         There exists exactly one Pythagorean triplet for which a + b + c = 1000.
         Find the product abc.
         */
-        public string getSolution(){
+        public string GetSolution()
+        {
             //a+b+x = 1000
             //c>333
             //a+b<667
             int a = 1, b = 1, c = 334;
-            while(c<1000){
-                while(a+b<667){
-                    if(a+b+c == 1000){
-                        if(a*a+b*b==c*c){
-                            return (a*b*c).ToString();
+            while (c < 1000)
+            {
+                while (a + b < 667)
+                {
+                    if (a + b + c == 1000)
+                    {
+                        if (a * a + b * b == c * c)
+                        {
+                            return (a * b * c).ToString();
                         }
                     }
-                    a++;    
+                    a++;
                 }
-                a=1;
+                a = 1;
                 b++;
-                if(b==667){
-                    b=1;
+                if (b == 667)
+                {
+                    b = 1;
                     c++;
                 }
             }

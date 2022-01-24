@@ -7,12 +7,15 @@ namespace ProjectEuler
 {
     // https://projecteuler.net/problem=2
     // By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
-    public class Problem2:Problem
+    public class Problem2:IProblem
     {
-        public String getSolution(){
+        public String GetSolution()
+        {
             int num1 = 1, num2 = 1, fib = 1, sum = 0;
-            while(fib < 4000000){
-                if(fib%2==0){
+            while(fib < 4000000)
+            {
+                if(fib%2==0)
+                {
                     sum += fib;
                 }
                 fib = num1 + num2;

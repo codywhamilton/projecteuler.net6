@@ -5,27 +5,24 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    public class Problem6:Problem
+    // https://projecteuler.net/problem=6
+    // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+    public class Problem6:IProblem
     {
-        // https://projecteuler.net/problem=6
-        // Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
-         public String getSolution(){
+         public String GetSolution()
+         {
             int n = 100;
-            long SquareOfSumOfNaturalNums = 0;
+            long squareOfSumOfNaturalNums = 0;
 
-            IEnumerable<int> squares =
+            IEnumerable<(int naturalNumber, int Square)> squares =
                 from i in Enumerable.Range(1, n)
                 let b = i * i
-                select b;
-
-            IEnumerable<int> naturalNumbers =
-                from i in Enumerable.Range(1, n)
-                select i;
+                select (i,b);
         
-            SquareOfSumOfNaturalNums = naturalNumbers.Sum();
-            SquareOfSumOfNaturalNums *= SquareOfSumOfNaturalNums;
+            squareOfSumOfNaturalNums = squares.Select(x => x.naturalNumber).Sum();
+            squareOfSumOfNaturalNums *= squareOfSumOfNaturalNums;
             
-            return (SquareOfSumOfNaturalNums - squares.Sum()).ToString();
+            return (squareOfSumOfNaturalNums - squares.Select(x => x.Square).Sum()).ToString();
             }
          }
 

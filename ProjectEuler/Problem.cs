@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    public interface Problem
+    public interface IProblem
     {
-        public String getSolution();
+        public String GetSolution();
     }
 }

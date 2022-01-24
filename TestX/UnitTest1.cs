@@ -18,8 +18,8 @@ public class UnitTest1
     [InlineData(typeof(ProjectEuler.Problem10), "142913828922")]
     public void CheckEuler(Type type, string correctAnswer)
     {
-                ProjectEuler.Problem prob = (ProjectEuler.Problem) Activator.CreateInstance( type);
-                Assert.Equal(correctAnswer,prob.getSolution());
+                ProjectEuler.IProblem prob = (ProjectEuler.IProblem) Activator.CreateInstance( type);
+                Assert.Equal(correctAnswer,prob.GetSolution());
     }
 
 }
