@@ -6,7 +6,7 @@ string line;
 int probNum;
 while((line = Console.ReadLine()) != "xx")
 {
-    if(int.TryParse(line,out probNum) && probNum >= 1 && probNum <= 10){
+    if(int.TryParse(line,out probNum) && probNum >= 1 && probNum <= 11){
         String typeName = "ProjectEulerSolver.Problem"+probNum;
         Type type = Type.GetType(typeName);
         ProjectEulerSolver.IProblem prob = (ProjectEulerSolver.IProblem) Activator.CreateInstance( type);
