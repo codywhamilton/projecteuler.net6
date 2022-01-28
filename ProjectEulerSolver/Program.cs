@@ -24,7 +24,7 @@ foreach (var type in types)
 }
 listOfProblems = listOfProblems.OrderBy( d => d.description.ProblemNumber).ToList();
 PrintProblems(listOfProblems);
-Console.WriteLine("\nEnter a number [1-{0}] xx to exit",listOfProblems.Count);
+Console.Write("\nEnter a number [1-{0}] xx to exit: ",listOfProblems.Count);
 
 while ((line = Console.ReadLine()) != "xx")
 {
@@ -34,9 +34,9 @@ while ((line = Console.ReadLine()) != "xx")
     }
     else
     {
-        Console.WriteLine("That is not a number [1-{0}]",listOfProblems.Count);
+        Console.WriteLine("\nThat is not a number [1-{0}]",listOfProblems.Count);
     }
-    Console.WriteLine("\nEnter a number [1-{0}] xx to exit",listOfProblems.Count);
+    Console.Write("\nEnter a number [1-{0}] xx to exit:",listOfProblems.Count);
 }
 
 void PrintProblems(List<(IProblem problem, ProblemDescription description)> problems)
