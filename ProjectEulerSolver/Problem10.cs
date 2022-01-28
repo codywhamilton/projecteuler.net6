@@ -19,6 +19,11 @@ namespace ProjectEulerSolver
             }
             return result.ToString();
         }
+        
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Summation of primes", 10, "Find the sum of all the primes below two million.");
+        }
         public List<int> GeneratePrimes(int n)
         {
             var r = from i in Enumerable.Range(2, n - 1).AsParallel()

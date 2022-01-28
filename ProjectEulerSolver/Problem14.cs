@@ -45,6 +45,10 @@ NOTE: Once the chain starts the terms are allowed to go above one million.
             }
             return result.Key.ToString();
         }
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Longest Collatz sequence", 14, "Which starting number, under one million, produces the longest Collatz chain?");
+        }
         private int CollatzSequence(long n)
         {
             int count = 0;//, m = n;

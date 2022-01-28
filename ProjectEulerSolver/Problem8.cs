@@ -72,5 +72,10 @@ namespace ProjectEulerSolver
             return result.maxProduct.ToString();
         }
 
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Largest product in a series", 8, "Find the thirteen adjacent digits in the 1000-digit number (https://projecteuler.net/problem=8) that have the greatest product. What is the value of this product?");
+        }
+
     }
 }

@@ -218,5 +218,9 @@ Work out the first ten digits of the sum of the following one-hundred 50-digit n
         {
             return numbers.Aggregate(BigInteger.Add).ToString().Substring(0,10);
         }
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Large sum", 13, "Work out the first ten digits of the sum of the following one-hundred 50-digit  (https://projecteuler.net/problem=13).");
+        }
     }
 }

@@ -22,6 +22,10 @@ namespace ProjectEulerSolver
 
             return "";
         }
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Highly divisible triangular number", 12, "What is the value of the first triangle number to have over five hundred divisors?");
+        }
         private long GetDivisorCount(long number)
         {
             //will not be 1 for this problem but for completness of this function if I reuse the code elsewhere.

@@ -101,5 +101,9 @@ namespace ProjectEulerSolver
             }
             return prodResult.ToString();
         }
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Largest product in a grid", 11, "What is the greatest product of four adjacent numbers in the same direction (up, down, left, right, or diagonally) in the 20×20 grid (https://projecteuler.net/problem=11)?");
+        }
     }
 }

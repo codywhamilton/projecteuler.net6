@@ -47,5 +47,9 @@ namespace ProjectEulerSolver
             }
             return "";
         }
+        public ProblemDescription GetProblemDescription()
+        {
+            return new ProblemDescription("Special Pythagorean triplet", 9, "There exists exactly one Pythagorean triplet for which a + b + c = 1000. Find the product abc.");
+        }
     }
 }
